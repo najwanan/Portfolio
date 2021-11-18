@@ -1,0 +1,257 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&family=Poppins:wght@100;200;300;400;500;600&family=Sen:wght@400;700;800&display=swap');
+
+
+
+body{
+    transition: 0.3s;
+    margin: 0; 
+    padding: 0;
+}
+
+header{
+ display: flex;
+ justify-content: flex-end;
+ padding: 30px; 
+ align-items: center;
+}
+
+footer{
+
+    justify-content: center;
+}
+
+p, h2, li{
+    font-family: 'poppins';
+}
+
+
+.main{
+    height:80vh; 
+  
+}
+
+ 
+/*Menu*/
+
+.headerWrapper{
+   display: block;
+  
+    
+}
+
+ul {
+    display: flex;
+}
+
+li{
+ text-decoration: none;
+ font-size: 1rem;
+ list-style: none;
+ width: 100px;
+ 
+}
+
+
+/*dark-light mode switch */
+.switch{
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: black;
+    position: relative;
+   
+}
+
+.flicker{
+
+width: 30px ;
+height: 30px;
+border-radius: 15px;
+background-color:white;
+position: absolute;
+transition: 0.3s;
+top: 5px;
+left: 5px;
+box-shadow: inset 4px 4px 4px rgb(255, 255,255),
+            inset -4px -4px 4px rgb(195 193 198 / 90%);
+
+}
+
+.moon{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 45px;
+}
+
+/*.sun{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+    background-color: gold;
+    top: 10px;
+    right: 55px;
+    position: absolute;
+   
+}*/
+
+/* dark mode class*/
+.dark{
+    background-color: rgb(57, 57, 57);
+    transition: 0.3s;
+}
+
+
+.dark .flicker {
+    transform:translateX(40px) ;
+}
+
+.dark > *{
+    color: green;
+}
+
+/*Main Title with Typing Effect*/
+
+.headerWrapper{
+    width: 65vw;
+    padding: 10%;
+    left: 50%;
+}
+
+.typeHeader{
+    /*animation:
+        typing 5s steps(50, end), 
+        cursor 1.2s step-end infinite;
+    white-space: nowrap; /*content on next line*/
+    overflow: hidden;
+    word-wrap: break-word;
+    border-right: 4px solid grey;
+    margin: 0 auto; 
+    font-family: 'Chakra Petch';
+    font-size: 4rem;
+    
+}
+
+
+.headerWrapper p:nth-child(1){
+    width: 7.3em;
+    animation: typing 2s steps(50, end);
+    animation-fill-mode: forwards;
+}
+
+.headerWrapper p:nth-child(2){
+    width: 7.3em;
+    animation: typing2 2s steps(50, end);
+    animation-delay: 2.1s;
+    animation-fill-mode: forwards;
+}
+
+.headerWrapper p:nth-child(3){
+    width: 7.3em;
+    animation: typing3 2s steps(50, end), 
+    blink .5s step-end infinite alternate;
+    animation-delay: 4.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes typing{
+    from{ width: 0}
+    to {width:100%}
+
+}
+
+@keyframes typing2{
+    from{ width: 0}
+    to {width:100%}
+
+}
+@keyframes typing3{
+    from{ width: 0}
+    to {width:100%}
+
+}
+
+@keyframes cursor{
+    from,to {border-color: transparent;}
+        50%{border-color: grey;}
+    }
+
+    /*floating socials*/
+
+
+
+    .icon-bar {
+        position: fixed;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        left: 3%;
+      }
+      
+      .icon-bar a {
+        display: block;
+        text-align: center;
+        padding: 16px;
+        transition: all 0.3s ease;
+        color: grey;
+        font-size: 20px;
+        
+      }
+
+
+    /*About Section*/
+
+    .About{
+        align-content: center;
+        height: 50vh;
+    }
+
+    .techstack{
+        display:block;
+        background-color:aliceblue;
+        width: 80vw;
+        height: 30%;
+        text-align: center;
+        padding: 30px;
+         margin: 5%;
+
+    }
+
+     .techstack a{
+         color:black;
+         font-size: 2rem;
+         padding: 30px;
+         margin: 5%;
+     }
+
+    /*Projects Section*/
+
+    .projects{
+        width: 98%;
+        height: 350px;
+        background-color: aliceblue;
+        margin:1%;
+        padding: 3%;
+        text-align: center;
+    }
+
+    .projectsSection{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+   
+@media only screen and (min-width:970px){
+    .projects {
+        width: 48%;
+        margin: 1%;
+        height: 600px;
+
+    }
+}
