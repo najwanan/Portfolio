@@ -1,12 +1,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&family=Poppins:wght@100;200;300;400;500;600&family=Sen:wght@400;700;800&display=swap');
 
+*::after{
+    box-sizing: border-box;
+}
 
+:root{
+    --ff-primary: 'Sen';
+    --ff-secondary: 'Chakra Petch';
+}
 
 body{
     transition: 0.3s;
     margin: 0; 
     padding: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
 }
 
 header{
@@ -17,12 +29,14 @@ header{
 }
 
 footer{
-
+    height: 150px;
+    background-color: #F2E2DF;
     justify-content: center;
+    align-content: center;
 }
 
 p, h2, li{
-    font-family: 'poppins';
+    font-family: 'Sen';
 }
 
 
@@ -44,12 +58,18 @@ ul {
     display: flex;
 }
 
-li{
+li, a{
  text-decoration: none;
  font-size: 1rem;
  list-style: none;
  width: 100px;
+ color: black
  
+}
+
+a:hover{
+    color: #817B8C;
+
 }
 
 
@@ -106,73 +126,138 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
     transition: 0.3s;
 }
 
+.dark .projects{
+    background-color:#383737;
+    box-shadow: 2px 2px 4px rgb(7, 7, 7);
+
+}
+
+.dark a{
+    color:white
+}
 
 .dark .flicker {
     transform:translateX(40px) ;
 }
 
 .dark > *{
-    color: green;
+    color:white;
 }
 
 /*Main Title with Typing Effect*/
 
 .headerWrapper{
     width: 65vw;
-    padding: 10%;
+    margin-left: 20%;
+    margin-top: 10%;
     left: 50%;
+    line-height: 1;
 }
 
-.typeHeader{
-    /*animation:
-        typing 5s steps(50, end), 
-        cursor 1.2s step-end infinite;
-    white-space: nowrap; /*content on next line*/
-    overflow: hidden;
-    word-wrap: break-word;
-    border-right: 4px solid grey;
-    margin: 0 auto; 
+.headerWrapper .typeHeader{
+    
+    border-right: .15em solid grey;
     font-family: 'Chakra Petch';
     font-size: 4rem;
+    font-weight: 300;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/*.typeHeader{
+    animation:
+        typing 5s steps(50, end), 
+        cursor 1.2s step-end infinite;
+    white-space: nowrap; /*content on next line
+}*/
+
+
+.headerWrapper .typeHeader:nth-child(1){
+    width: 7.3em;
+    animation: typing 2s steps(50, end);
+    -webkit-animation: typing 2s steps(50, end);
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.headerWrapper .typeHeader:nth-child(2){
+    width: 15em;
+    opacity: 0;
+    animation: typing2 2s steps(50, end);
+    -webkit-animation: typing2 2s steps(50, end);
+    animation-delay: 2.1s;
+    -webkit-animation: 2.1s;
+    animation-fill-mode: forwards;
+    -webkit-animation: forwards;
+}
+
+.headerWrapper .typeHeader:nth-child(3){
+    width: 15em;
+    opacity: 0;
+    animation: typing3 2s steps(40, end), 
+    blink .5s step-end infinite alternate;
+    -webkit-animation: typing3 2s steps(40, end), 
+    blink .5s step-end infinite alternate;
+    animation-delay: 4.3s;
+    -webkit-animation-delay: 4.3s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
     
 }
 
-
-.headerWrapper p:nth-child(1){
-    width: 7.3em;
-    animation: typing 2s steps(50, end);
-    animation-fill-mode: forwards;
-}
-
-.headerWrapper p:nth-child(2){
-    width: 7.3em;
-    animation: typing2 2s steps(50, end);
-    animation-delay: 2.1s;
-    animation-fill-mode: forwards;
-}
-
-.headerWrapper p:nth-child(3){
-    width: 7.3em;
-    animation: typing3 2s steps(50, end), 
-    blink .5s step-end infinite alternate;
-    animation-delay: 4.3s;
-    animation-fill-mode: forwards;
-}
-
 @keyframes typing{
-    from{ width: 0}
-    to {width:100%}
+ 0%{ width: 0;}
+
+ 99.9%{ border-right: .15em solid grey;}
+
+100% {border:none;}
 
 }
 
 @keyframes typing2{
-    from{ width: 0}
-    to {width:100%}
-
+    0%{ 
+        width: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    99.9%{ 
+        border-right: .15em solid grey;
+    }
+   100% {
+       opacity: 1;
+       border:none;
+    }
 }
+
+@keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99.9% {
+      border-right: .15em solid orange;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+  }
+
+
 @keyframes typing3{
-    from{ width: 0}
-    to {width:100%}
+    0%{ width: 0;}
+
+    1% {opacity: 1;}
+
+    99.9%{ border-right: .15em solid grey;}
+   
+   100% {
+       opacity: 1;
+    }
+   
 
 }
 
@@ -203,7 +288,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         font-size: 20px;
         
       }
-
+     
 
     /*About Section*/
 
