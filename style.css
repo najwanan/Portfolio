@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&family=Poppins:wght@100;200;300;400;500;600&family=Sen:wght@400;700;800&display=swap');
-
+*, 
+*::before, 
 *::after{
     box-sizing: border-box;
 }
@@ -8,12 +9,44 @@
 :root{
     --ff-primary: 'Sen';
     --ff-secondary: 'Chakra Petch';
+
+    --fw-reg: 300;
+    --fw-bold:600;
+
+    --clr-light: #fff;
+    --clr-dark:#0D0D0D;
+    --clr-accent1:#817B8C;
+    --clr-accent2: #161840;
+    --clr-accent3:#F2E2DF;
+
+
+    --fs-h1: 3rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
 }
 
+@media (min-width:800px){
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 2rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+
+/*General Styles*/
+
 body{
+    background: var(--clr-accent3);
+    color: var(--clr-accent2);
     transition: 0.3s;
     margin: 0; 
     padding: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
 }
 
 img{
@@ -35,6 +68,14 @@ footer{
     align-content: center;
 }
 
+h1, h2, h3{
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1{font-size: var(--fs-h1)}
+h2{font-size: var(--fs-h2)}
+h3{font-size: var(--fs-h3)}
 p, h2, li{
     font-family: 'Sen';
 }
@@ -42,6 +83,10 @@ p, h2, li{
 
 .main{
     height:80vh; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
   
 }
 
@@ -182,7 +227,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 
 .headerWrapper .typeHeader:nth-child(2){
     width: 15em;
-    opacity: 0;
+    opacity: 1;
     animation: typing2 2s steps(50, end);
     -webkit-animation: typing2 2s steps(50, end);
     animation-delay: 2.1s;
@@ -230,21 +275,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
     }
 }
 
-@keyframes type2 {
-    0% {
-      width: 0;
-    }
-    1% {
-      opacity: 1;
-    }
-    99.9% {
-      border-right: .15em solid orange;
-    }
-    100% {
-      opacity: 1;
-      border: none;
-    }
-  }
+
 
 
 @keyframes typing3{
@@ -276,16 +307,16 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        left: 3%;
+        left: 2%;
       }
       
       .icon-bar a {
         display: block;
-        text-align: center;
+        text-align: left;
         padding: 16px;
         transition: all 0.3s ease;
         color: grey;
-        font-size: 20px;
+        font-size: 1rem;
         
       }
      
@@ -331,6 +362,12 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         flex-wrap: wrap;
     }
 
+    #uberClone{
+        background-image: url();
+        background-size: cover;
+    }
+
+     /*Media Query Reponsive*/
    
 @media only screen and (min-width:970px){
     .projects {
