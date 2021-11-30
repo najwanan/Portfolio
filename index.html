@@ -6,6 +6,7 @@
     <title>Dev Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   </head>
 
 
@@ -13,7 +14,7 @@
       <header>
           <div class="menuWrapper">
             <ul>
-                <li class="navItem"><a href="#About" class="navlink">About</a></li> 
+                <li class="navItem"><a href="./About.html" target="_blank" class="navlink">About</a></li> 
                 <li class="navItem"><a href="#myServices" class="navlink">Services</a</li>
                 <li class="navItem"><a href="#Projects" class="navlink">Projects</a></li>
                 <li class="navItem"><a href="#footer" class="navlink">Contact</a></li>
@@ -40,92 +41,174 @@
      <!--Main Hero-->
     <section class="main">
         <div class="headerWrapper">
-            <h2 class="typeHeader">Hi, I'm Najwana. </h2>
-            <h2 class="typeHeader">A FrontEnd Engineer </h2> 
-             <h2 class="typeHeader">based out of Seattle, WA.</h2>
+            <h1 class="typeHeader">Hi, I'm Najwana. </h1>
+            <h1 class="typeHeader">A FrontEnd Engineer </h1> 
+             <h1 class="typeHeader">based out of Seattle, WA.</h1>
         </div>
         
     </section>
 
+   
 
+    <!--Skillset-->
 
-    <!--My services-->
-
-    <section class="myServices" id="myServices">
-      <h2> What I do </h2>
+    <section class="portSections" id="myServices">
+      <h2 id="sectionServicesTitle"> I can help with... </h2>
           
-        <div class="services">
+        <div class="gridServices">
+            <div class="itemWrapper"> 
+                  <div class="svcIcon">
+                    <i class="fa fa-desktop serIcon" aria-hidden="true"></i>
+                  </div>
 
-          <div class="service">
-            <h3>Web Design</h3>
-            <p>I can create low fidelity and high fidelity prototypes to create a vision for your project</p>
-          </div> <!--Service1-->
-       
-          <div class="service">
-            <h3>Web Development</h3>
-            <p>I build things for the web. My focus in on building with a mobile first methodology and strive to make accessible products</p>
-          </div> <!--Service2-->
-       
+                  <div class="service">
+                    <h3>Web Design</h3>
+                    <p>I can create low fidelity and high fidelity prototypes for projects.</p>
+                  </div> <!--Service1-->
+             </div>
 
-          <div class="service">
-            <h3>Product Management</h3>
-            <p>I work with teams to take ideas from the ideation phase and to shipping</p>
-          </div> <!--Service3-->
+            <div class="itemWrapper"> 
+                  <div class="svcIcon">
+                    <i class="fa fa-code serIcon" aria-hidden="true"></i>
+                  </div>
+                  <div class="service">
+                    <h3>Web Development</h3>
+                    <p>I build things for the web, mostly in javascript. I'm currently experimenting with React</p>
+                  </div> <!--Service2-->
+            </div>
+
+              <div class="itemWrapper">
+                  <div class="svcIcon">
+                  <i class="fa fa-code-fork serIcon" aria-hidden="true"></i>
+                  </div>
+                  <div class="service">
+                    <h3>Product Management</h3>
+                    <p>I work with teams to take ideas from the ideation to shipping</p>
+                  </div> <!--Service3-->
+              </div>
+
+              <div class="itemWrapper">
+                <div class="svcIcon">
+                <i class="fa fa-pencil serIcon" aria-hidden="true"></i>
+                </div>
+                <div class="service">
+                  <h3>Technical Writing</h3>
+                  <p>Writing about technical topics can get complicated, but it doesn
+                    t have to be. I write to make the complex stuff simple.
+                  </p>
+                </div> <!--Service3-->
+             </div>
 
         </div>
      
     </section>
 
-  <!--About Section-->
-    <section class="aboutMe" id="About">
-        
-          <h2>About Me</h2>
-          <p class="sectioAboutMe"></p>
-          <div class="aboutMeBody">
-            <p>Teaching myself to code is one of the best things I’ve ever done. I love building projects that are both functional and fun. Outside of my dev work, I’m a Code Pen Enthusiast, and a participant in tech Instagram. I write occasionally on dev blogs like Hashnode and DevTo. 
-            </p>
-            <p>Oh, and Hackathons are my new favorite thing. :-)</p>
-          </div>
-        <img src="./Assets/BWProfile.png" alt="profileImg">
-       <!-- <div class="techstack">
-            <a href="#" class="socials"><i class="fa fa-html5"></i></a> 
-            <a href="#" class="socials"><i class="fa fa-css3"></i></a> 
-            <a href="#" class="socials"><i class="fa fa-js"></i></a> 
-            <a href="#" class="socials"><i class="fa fa-react"></i></a>
-            <a href="#" class="socials"><i class="fa fa-git"></i></a> 
+     <!--ToolBox-->
 
-        </div> -->
+     <section class="portSections" id="toolbox">
+      <h2>ToolBox</h2>
+       <div class="techstack">
+
+       
+        <div class="toolboxGrid">
+          
+          <div class= "toolContainer" id="languages">
+            <h3>Languages</h3>
+            <div class="toolIcons">
+              <img src="./Assets/icons8-html-5-100 (1).png" alt="html5" class="languagesImg">
+              <img src="./Assets/icons8-css3-100 (3).png" alt="css3" class="languagesImg">
+              <img src="./Assets/icons8-javascript-100 (4).png" alt="javascript" class="languagesImg">
+              <img src="./Assets/icons8-jquery-100 (1).png" alt="jQuery" class="languagesImg">
+              <img src="./Assets//icons8-react-native-100.png" alt="reactnat" class="languagesImg">
+            </div>
+           
+          </div>
+
+          <div class= "toolContainer"id="tools">
+              <h3>Tools</h3>
+              <div class="toolIcons">
+                <img src="./Assets/icons8-git-100.png" alt="git" class="toolsImg">
+                <img src="./Assets/icons8-github-90.png" alt="github" class="toolsImg">
+                <img src="" alt="" class="toolsImg">
+              </div>
+          
+          </div>
+  
+          <div class= "toolContainer"id="design">
+              <h3>Design</h3>
+              <div class="toolIcons">
+              <img src="./Assets/icons8-adobe-logo-100.png" alt="adobe" class="designImg">
+              <img src="./Assets/icons8-figma-96.png" alt="figma" class="designImg">
+              
+             </div>
+          </div>
+        </div>
+      </div>
+
+      </section>
+      
+           
+  <!--About Section-->
+    <section class="portSections" id="About">
+        
+     
     </section>
 
-   <section class="projectsSection" id="Projects">
+   <section class="portSections" id="Projects">
        <div class="projects" id="Uber">
            <h3>Uber Clone</h3>
            <p>Uber Clone built with React</p>
            <br>
-           <a href="">Demo</a>
-            <a href="">Code</a>
+           <a href="https://github.com/unnamedrd/Uber-Clone">Code</a>
        </div>
        <div class="projects" id="Athena">
            <h3>aCuppaCoffee Virtual Onboarding Experience</h3>
            <p>Athena Hackathon Submission</p>
-           <a href="">Demo</a>
-           <a href="">Code</a>
+           <a href="https://github.com/unnamedrd/acuppacoffee">Code</a>
        </div>
        <div class="projects" id="BuJo">
            <h3>BuJo Art + Organization Tool</h3>
            <p>Mint Bean Hackathon Submission</p>
-           <a href="">Demo</a>
-           <a href="">Code</a>
+           <a href="https://github.com/unnamedrd/Bujo">Code</a>
        </div>
        <div class="projects">
-        <h3>Project4</h3>
-        <a href="">Demo</a>
+        <h3>Tech Together</h3>
+        <p>Tech Together Hackathon Submission</p>
         <a href="">Code</a>
         </div>
    </section>
 
+   <section class="portSections" id="Projects">
+    <div class="contactWrapper">
+      <h2>You can find me here</h2>
+      <p>theunnamedrd@gmail.com</p>
+    </div>
+   </section>
+
+
+
    <footer id="footer">
-       <p>theunnamedrd@gmail.com</p>
+       <h2>Currently</h2>
+       <div class="footerImgContainer">
+        <img src="./Assets/icons8-snowglobe-64.png" alt="" class="footerImg">
+        <h3 class="footerTxt">Social Distancing in Seattle</h3>
+       </div>
+    
+       <div class="footerImgContainer">
+        <img src="./Assets/icons8-heart-health-96.png" alt="" class="footerImg">
+        <h3 class="footerTxt">Wearing Masks</h3>
+       </div>
+      
+       <div class="footerImgContainer">
+         <img src="./Assets/icons8-laptop-90.png" alt="" class="footerImg">
+         <h3 class="footerTxt">Learning MERN</h3>
+       </div>
+       
+       <div class="footerImgContainer">
+         <img src="./Assets/icons8-notebook-64.png" alt="" class="footerImg">
+         <h3 class="footerTxt">Making a To Do list for 2022</h3>
+       </div>
+       
    </footer>
     
     <script src="app.js"></script>
