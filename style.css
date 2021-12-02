@@ -83,13 +83,16 @@ footer{
   width: 100vw;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-
-
+  align-items: left;
+  justify-content: left;
+  padding: 4%;
+  
 }
 
+@media (min-width:600px){
+    .portSections{
+        padding: 0%;}
+}
 
 
 h1, h2, h3{
@@ -125,7 +128,6 @@ ul {
 
 li, a{
  text-decoration: none;
-
  list-style: none;
  width: 100px;
  color: black
@@ -370,21 +372,12 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
       }
      
 
-    /*About Section*/
-
-    .About{
-        align-content: center;
-        height: 50vh;
-     
-    }
-
-  
-
+   
      /*Services*/
 
      #myServices{
         color: var(--clr-accent2);
-        text-align: center;
+        text-align: left;
      }
 
 
@@ -411,10 +404,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         grid-gap: 1.3em;*/
         padding: 2em;
         opacity: .8;
-        width: 100vw;
-        height: 50vh;
-
-
+       
     }
 
     .gridServices itemWrapper{
@@ -423,7 +413,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
     }
 
     .gridServices .svcIcon{
-        font-size: 2rem;
+        font-size: 1rem;
         margin-right: 1em;
         color: var(--clr-accent2);
         float: left;
@@ -560,19 +550,8 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
      }
 
 
-    @media (min-width:800px){
-        .About{
-            display: flex;
-
-            max-width: 1000px;
-            align-content: center;
-        }
-
-        .aboutMeBody{
-            max-width: 75%;
-        }
-
-    }
+  
+    
   
 
     /*Projects Section*/
@@ -621,25 +600,117 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
   footer{
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
+       justify-content: left;
       padding: 1em;
   }
 
   footer h3{
     font-weight: 200;
-    font-size: 1rem;
-}
+    font-size: .5rem;
+  }
 
 footer img{
-    height: 2em;
+    height: 1.5em;
 }
 
 @media (min-width:800px){
     
-    footer{
-
-    }
-
     .footerImgContainer{
         margin: 2em;
+        justify-content: space-between;
     }
+    footer h3{
+        font-weight: 200;
+        font-size: 1rem;
+      }
+
+      footer img{
+        height: 2em;
+    }
+}
+
+
+
+/*About Section*/
+
+
+ .About{
+    align-content: center;
+    height: 50vh;
+ 
+}
+ .dark .aboutSections{
+    color: var(--clr-accent2);
+    background-color: var(--clr-accent2);
+}
+
+.aboutSections{
+    border: .1em solid var(--clr-accent2);
+    box-shadow: 2px 2px 4px rgb(113, 109, 109, 0.5);
+    padding: 1rem;
+}
+
+.aboutGrid button{
+    border-radius: 45px;
+    width: 50%;
+    height: 3rem;
+    box-shadow: 2px 2px 4px rgb(113, 109, 109, 0.5);
+}
+
+#summary{
+    background-color: var(--clr-accent3);
+
+}
+
+#present{
+    background-color: var(--clr-light);
+
+}
+
+#ongoing{
+    background-color: var(--clr-accent3);
+}
+
+#previous{
+    background-color: var(--clr-light);
+
+}
+
+
+
+@media (min-width:600px){
+
+    .aboutGrid{
+        height: 90vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: .5em;
+        
+    }
+    .aboutGrid h2{
+        font-size: 1.25em;
+    }
+
+    .aboutSections{
+        padding: 1rem;
+      
+    }
+
+
+
+    .aboutSections:last-child{
+        grid-column-start:2; 
+        grid-column-end: 5;
+    }
+    .aboutSections:nth-child(1){
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .aboutSections:nth-child(2){
+        grid-column-start:2; 
+        grid-column-end: 4;
+    
+    }
+
 }
