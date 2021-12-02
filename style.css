@@ -51,19 +51,18 @@ body{
     font-size: var(--fs-body);
     line-height: 1.6;
     width: 100vw;
+   
 }
 
 
 
 header{
  display: flex;
- justify-content: space-between;
- padding: 25px; 
  align-items: center;
 }
 
 footer{
-    height: 20vh;
+    height: 25vh;
     background-color:var(--clr-accent3);
     justify-content: center;
     align-content: center;
@@ -105,7 +104,11 @@ h1{font-size: var(--fs-h1)}
 h2{font-size: var(--fs-h2)}
 h3{font-size: var(--fs-h3)}
 
-p, h2, h3,  li{
+h2, h3,  li{
+    font-family: var(--ff-secondary);
+}
+
+p{
     font-family: var(--ff-primary);
 }
 
@@ -120,19 +123,31 @@ img{
 
 /*Menu*/
 
-
-
-ul {
+.menuWrapper{
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 1em;
+    width: 100vw;
+}
+
+ul{
+    display: flex;
+ 
+  
+    
 }
 
 li, a{
  text-decoration: none;
  list-style: none;
- width: 100px;
- color: black
- 
+ color: black;
+ margin-right: .25em;
+
+
 }
+
+li{text-transform: uppercase;}
 
 a:hover{
     color: #817B8C;
@@ -559,7 +574,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
     #Projects{
         display:flex;
         flex-wrap: wrap;
-        background-color: var(--clr-accent3);
+        align-content: center;
     }
 
     .projects{
@@ -583,25 +598,36 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 @media only screen and (min-width:600px){
 
     #Projects{
-        height: 50vh;
+        height: 100vh;
     }
     .projects {
         flex-direction: row;
         flex-wrap: wrap;
         margin: 1%;
+        width: 17em;
+        height: 17em;
        
     }
 
    
 }
 
+  /*Contact Section*/
+
+  #contactForm{
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+  }
+
   /*Footer Section*/
 
   footer{
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-       justify-content: left;
+      /*flex-wrap: wrap;*/
+      justify-content: left;
       padding: 1em;
   }
 
@@ -614,11 +640,20 @@ footer img{
     height: 1.5em;
 }
 
+.footerImgContainer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+    font-size: .75em;
+    
+}
+
 @media (min-width:800px){
     
     .footerImgContainer{
         margin: 2em;
         justify-content: space-between;
+
     }
     footer h3{
         font-weight: 200;
