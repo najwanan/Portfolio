@@ -15,11 +15,15 @@
     --fw-reg: 300;
     --fw-bold:500;
 
-    --clr-light: #fff;
+    --clr-light: #FAF9F5;
     --clr-dark:#0D0D0D;
     --clr-accent1:#817B8C;
     --clr-accent2: #161840;
     --clr-accent3:#F2E2DF;
+    --clr-accent4:#FAFAFA;
+    --clr-accent5:#FAF8F4;
+    --clr-accent6:#F6F2EC;
+
 
 
     --fs-h1: 3rem;
@@ -59,6 +63,7 @@ body{
 header{
  display: flex;
  align-items: center;
+ margin-right: .5em;
 }
 
 footer{
@@ -69,7 +74,7 @@ footer{
 }
 
 .main{
-    height:80vh; 
+    height:90vh; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -210,7 +215,8 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 
 .dark .projects{
     background-color:#383737;
-    box-shadow: 2px 2px 4px rgb(7, 7, 7);
+    box-shadow: 2px 2px 4px rgb(7, 7, 7, 0.4),
+    -2px -2px 4px rgb(255, 255,255, 0.4);
 
 }
 
@@ -391,32 +397,22 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
      /*Services*/
 
      #myServices{
-        color: var(--clr-accent2);
+       
         text-align: left;
      }
 
 
      #sectionServicesTitle{
-         color: var(--clr-accent2);
+        
          width: 50%vw;
      }
 
-     /*#sectionServicesTitle::before{
-         content: '';
-         display: block;
-         width: 2em; 
-         height: 2px;
-         margin: 0.5em auto 1em;
-         background-color: var(--clr-dark);
-         
-    }*/
+   
 
     .gridServices{
 
         display:flex; 
         flex-direction: column;
-        /*grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 1.3em;*/
         padding: 2em;
         opacity: .8;
        
@@ -424,7 +420,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 
     .gridServices itemWrapper{
         margin: 2em; 
-        background-color: var(--clr-accent3);
+     
     }
 
     .gridServices .svcIcon{
@@ -443,6 +439,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
     .svcIcon{
         position: relative;
         top: 5%;
+        margin-left: 5%;
      }
      
      .serIcon{
@@ -467,17 +464,18 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         /*display: grid;
         grid-template-columns: 1fr, 1fr, 1fr, 1fr;*/
         width: 100vw;
-        background-color: var(--clr-accent1);
+      
        /* margin: 0 auto; */
         }
         .gridServices .itemWrapper{
            display: flex;
            flex-direction: column;
-           background-color: var(--clr-accent1);
+           
            width: 25%;
            margin: 2%;
            border-radius: 15px;
-           box-shadow: 2px 2px 4px rgb(7, 7, 7, 0.3);
+           box-shadow: 2px 2px 4px rgb(7, 7, 7, 0.3), 
+           -4px -4px 6px rgb(250, 250, 250, 0.4);
            
           
     
@@ -493,6 +491,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         margin: 1em;
         text-align: left;
         width: 80%;
+        justify-content: center;
         }
 
         #myServices{
@@ -504,62 +503,70 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 
      /* ToolBox*/
      #toolbox{
+         display: flex;
          background-color: var(--clr-accent1);
          padding: 2em;
+         align-items: center;
      }
   
     .toolboxGrid{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 90%;
-
+        justify-content: baseline;
+        align-items: center;
+        width: 80%;
 
     }
-    .toolIcons{
+  
+
+    .toolContainer{
+        display: flex;
+        padding: 1em;
+        width: 100%;
+        justify-content:left;
+       
+    }
+
+     .languagesImg, .toolsImg, .designImg{
+       height: 3em;
+       padding: .25em;
+     }
+
+     .toolIcons{
         display: flex;
         flex-direction: row;
         align-content: left;
         flex-wrap: wrap;
         padding: 1em;
+        font-weight: 200;
       
     }
 
-    .toolContainer{
-        padding: 1em;
-        width: 100%;
-        justify-content: space-evenly;
-    }
-
-     .languagesImg, .toolsImg, .designImg{
-       height: 2em;
-       padding: .25em;
-     }
-
 
      @media (min-width:800px){
+        #toolbox{
+            height: 50vh;
+        }
+
          .toolboxGrid{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            
+            grid-template-columns: repeat(3, 1fr);
          }
  
          .toolContainer{
+            display: flex;
+            flex-direction: row;
             flex-flow: wrap;
             padding: 1em;
             margin: 1em;
             width: 100%;
-            align-content: left;
-            justify-content: space-between;
+            align-content: center;
+            justify-content: center;
         }
 
         .toolIcons{
-         
             margin: 1em;
-        }
-
-        #toolbox{
-            height: 50vh;
         }
 
      }
@@ -580,11 +587,13 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
     .projects{
         width: 15em;
         height: 15em;
-        background-color: var(--clr-accent1);
+        background-color: var(--clr-accent6);
         margin:1%;
         padding: 3%;
         text-align: center;
         border-radius: 10px;
+        box-shadow: 2px 2px 4px rgb(7, 7, 7, 0.4),
+    -4px -4px 8px rgb(250, 250,250, 0.7);
     }
 
     #uberClone{
@@ -615,7 +624,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
   /*Contact Section*/
 
   #contactForm{
-      height: 50vh;
+      height: 75vh;
       display: flex;
       justify-content: center;
       text-align: center;
@@ -673,17 +682,32 @@ footer img{
  .About{
     align-content: center;
     height: 50vh;
+   
  
 }
  .dark .aboutSections{
-    color: var(--clr-accent2);
-    background-color: var(--clr-accent2);
+    color: var(--clr-dark);
+    border: .1em solid var(--clr-accent2);
+   
+}
+
+.dark #present, .dark #previous{
+    background-color: var(--clr-dark);
+    color: var(--clr-accent5);
+
+}
+
+.dark #summary, .dark #ongoing{
+    background-color: var(--clr-accent1);
+    color: var(--clr-accent5);
+
 }
 
 .aboutSections{
-    border: .1em solid var(--clr-accent2);
+    border: .1em solid var(--clr-accent4);
     box-shadow: 2px 2px 4px rgb(113, 109, 109, 0.5);
     padding: 1rem;
+    border-radius: 15px;
 }
 
 .aboutGrid button{
@@ -691,26 +715,20 @@ footer img{
     width: 50%;
     height: 3rem;
     box-shadow: 2px 2px 4px rgb(113, 109, 109, 0.5);
+    border: solid 1px var(--clr-accent4);
 }
 
-#summary{
-    background-color: var(--clr-accent3);
+#summary, #ongoing{
+    background-color: var(--clr-accent6);
 
 }
 
-#present{
+#present, #previous{
     background-color: var(--clr-light);
 
 }
 
-#ongoing{
-    background-color: var(--clr-accent3);
-}
 
-#previous{
-    background-color: var(--clr-light);
-
-}
 
 
 
@@ -732,7 +750,24 @@ footer img{
       
     }
 
+    #previous{
+        display: flex;
+    }
 
+    .workHistoryWrapper{
+        width: 40%;
+        padding: 1em;
+        
+    }
+    .workTextWrapper{
+
+        flex-basis: 60%;
+        padding: 1em;
+
+    }
+    .workHistoryTxt{
+        width: 80%;
+    }
 
     .aboutSections:last-child{
         grid-column-start:2; 
