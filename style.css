@@ -30,6 +30,7 @@
     --fs-h2: 1.5rem;
     --fs-h3: 1.25rem;
     --fs-body: 1rem;
+    --fs-menu: 1rem;
 }
 
 @media (min-width:800px){
@@ -38,6 +39,7 @@
         --fs-h2: 2rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.25rem;
+        --fs-menu: 1.5rem;
         
     }
 }
@@ -62,8 +64,10 @@ body{
 
 header{
  display: flex;
+ flex-direction: row;
  align-items: center;
  margin-right: .5em;
+ width: 100vw;
 }
 
 footer{
@@ -130,17 +134,15 @@ img{
 
 .menuWrapper{
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 1em;
-    width: 100vw;
+    flex-direction: row;
+    margin-right: .2em;
+    width: 70vw;
+    
 }
 
 ul{
     display: flex;
- 
-  
-    
+    padding-left: 5%;
 }
 
 li, a{
@@ -148,22 +150,44 @@ li, a{
  list-style: none;
  color: black;
  margin-right: .25em;
+ font-size: var(--fs-menu);
 
 
 }
 
-li{text-transform: uppercase;}
+
 
 a:hover{
     color: #817B8C;
 
 }
 
+@media (min-width:600px){
+
+    .menuWrapper{
+        display: flex;
+        flex-direction: row;
+       
+        margin-right: 1em;
+        width: 90vw;
+        
+    }
+    ul{
+        width: 100%;
+     
+    }
+
+    li{text-transform: uppercase;
+        padding: 1em;
+    
+    }
+}
+
 
 /*dark-light mode switch */
 .switch{
-    width: 80px;
-    height: 40px;
+    width: 3em;
+    height: 1.5em;
     border-radius: 20px;
     background-color: black;
     position: relative;
@@ -172,40 +196,64 @@ a:hover{
 
 .flicker{
 
-width: 30px ;
-height: 30px;
+width: 1.25em ;
+height: 1.25em;
 border-radius: 15px;
 background-color:white;
 position: absolute;
 transition: 0.3s;
-top: 5px;
-left: 5px;
+top: 2px;
+left: 3px;
 box-shadow: inset 4px 4px 4px rgb(255, 255,255),
             inset -4px -4px 4px rgb(195 193 198 / 90%);
 
 }
 
 .moon{
-    width: 20px;
-    height: 20px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 10px;
     box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
     position: absolute;
-    top: 5px;
-    left: 45px;
+    top: 2px;
+    left: 25px;
 }
 
-/*.sun{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
-    background-color: gold;
-    top: 10px;
-    right: 55px;
+
+@media (min-width:600px){
+    .switch{
+        width: 80px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: black;
+        position: relative;
+    }
+
+    .flicker{
+    width: 30px ;
+    height: 30px;
+    border-radius: 15px;
+    background-color:white;
     position: absolute;
-   
-}*/
+    transition: 0.3s;
+    top: 5px;
+    left: 5px;
+    box-shadow: inset 4px 4px 4px rgb(255, 255,255),
+                inset -4px -4px 4px rgb(195 193 198 / 90%);
+    
+    }
+    .moon{
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+        position: absolute;
+        top: 5px;
+        left: 45px;
+    }
+}
+
+
 
 /* dark mode class*/
 .dark{
@@ -225,12 +273,14 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 }
 
 .dark .flicker {
-    transform:translateX(40px) ;
+    transform:translateX(2em) ;
 }
 
 .dark > *{
     color:white;
 }
+
+
 
 /*Main Title with Typing Effect*/
 
@@ -413,13 +463,19 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 
         display:flex; 
         flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
         padding: 2em;
         opacity: .8;
        
     }
 
-    .gridServices itemWrapper{
-        margin: 2em; 
+    .gridServices .itemWrapper{
+        margin: 1em; 
+        padding: 1em;
+        border-radius: 15px;
+        box-shadow: 2px 2px 4px rgb(7, 7, 7, 0.3), 
+        -4px -4px 6px rgb(250, 250, 250, 0.4);
      
     }
 
@@ -470,14 +526,12 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         .gridServices .itemWrapper{
            display: flex;
            flex-direction: column;
-           
            width: 25%;
            margin: 2%;
+           padding: 0;
            border-radius: 15px;
            box-shadow: 2px 2px 4px rgb(7, 7, 7, 0.3), 
            -4px -4px 6px rgb(250, 250, 250, 0.4);
-           
-          
     
         }
         
@@ -582,13 +636,14 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         display:flex;
         flex-wrap: wrap;
         align-content: center;
+
     }
 
     .projects{
         width: 15em;
         height: 15em;
         background-color: var(--clr-accent6);
-        margin:1%;
+        margin:3%;
         padding: 3%;
         text-align: center;
         border-radius: 10px;
@@ -637,7 +692,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
       flex-direction: row;
       /*flex-wrap: wrap;*/
       justify-content: left;
-      padding: 1em;
+    
   }
 
   footer h3{
@@ -671,6 +726,20 @@ footer img{
 
       footer img{
         height: 2em;
+    }
+    .footerMenu{
+        padding: 3%;
+        margin: 3%;
+    }
+
+    footerImgContainer footerNav{
+        padding: 3%;
+        margin: 3%;
+    }
+    .footerMenu a, li{
+        font-size:1em;
+        
+        padding: 2%;
     }
 }
 
@@ -709,7 +778,15 @@ footer img{
     padding: 1rem;
     border-radius: 15px;
 }
+.aboutGrid{
+    display: grid;
+    width: 90vw;
+    grid-gap: .5em;
+    grid-template-rows: repeat(4, 1fr);
+    margin: 3%;
 
+
+}
 .aboutGrid button{
     border-radius: 45px;
     width: 50%;
@@ -727,9 +804,6 @@ footer img{
     background-color: var(--clr-light);
 
 }
-
-
-
 
 
 @media (min-width:600px){
