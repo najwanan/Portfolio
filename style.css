@@ -1,6 +1,6 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&family=Asap+Condensed&family=B612&family=Chakra+Petch:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400&family=Space+Grotesk:wght@300;400&family=Thasadith:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&family=Poppins:wght@100;200;300;400;500;600&family=Sen:wght@400;700;800&display=swap');
  *, 
 *::before, 
@@ -9,10 +9,10 @@
 }
 
 :root{
-    --ff-primary: 'Aleo';
+    --ff-primary: 'Jost';
     --ff-secondary: 'Chakra Petch';
 
-    --fw-reg: 300;
+    --fw-reg: 200;
     --fw-bold:500;
 
     --clr-light: #FAF9F5;
@@ -527,6 +527,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
            display: flex;
            flex-direction: column;
            width: 25%;
+           height: 80%;
            margin: 2%;
            padding: 0;
            border-radius: 15px;
@@ -670,6 +671,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         margin: 1%;
         width: 17em;
         height: 17em;
+     
        
     }
 
