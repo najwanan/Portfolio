@@ -23,6 +23,9 @@
     --clr-accent4:#FAFAFA;
     --clr-accent5:#FAF8F4;
     --clr-accent6:#F6F2EC;
+    --clr-accent7:#050d05;
+    --clr-accent8:#1a1a08;
+    --clr-accent9:#383737;
 
 
 
@@ -68,6 +71,7 @@ header{
  align-items: center;
  margin-right: .5em;
  width: 100vw;
+ border-bottom: solid 1.5px black;
 }
 
 footer{
@@ -482,7 +486,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
     .gridServices .svcIcon{
         font-size: 1rem;
         margin-right: 1em;
-        color: var(--clr-accent2);
+        color: var(--clr-accent7);
         float: left;
         
     }
@@ -559,7 +563,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
      /* ToolBox*/
      #toolbox{
          display: flex;
-         background-color: var(--clr-accent1);
+         background-color: var(--clr-accent6);
          padding: 2em;
          align-items: center;
      }
@@ -571,15 +575,21 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         justify-content: baseline;
         align-items: center;
         width: 80%;
+        box-shadow: inset 3px 3px 6px rgb(57, 57, 57, 0.4),
+         inset -5px -5px 10px rgb(255, 255, 255, 0.4);
 
     }
   
 
     .toolContainer{
         display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         padding: 1em;
         width: 100%;
+        height: 30%;
         justify-content:left;
+        background-color: var(--clr-light);
        
     }
 
@@ -613,15 +623,20 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
             display: flex;
             flex-direction: row;
             flex-flow: wrap;
+            height: 90%;
+            width: 96%;
             padding: 1em;
-            margin: 1em;
-            width: 100%;
+            margin: .5em;
             align-content: center;
-            justify-content: center;
+            align-items: start;
+            justify-content: left;
+            text-align: center;
         }
 
         .toolIcons{
-            margin: 1em;
+            margin: .5em;
+            padding: .5em;
+            flex-wrap: wrap;
         }
 
      }
@@ -637,6 +652,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         display:flex;
         flex-wrap: wrap;
         align-content: center;
+        padding-top: 5%;
 
     }
 
@@ -664,6 +680,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 
     #Projects{
         height: 100vh;
+        padding-top: 5%;
     }
     .projects {
         flex-direction: row;
@@ -671,6 +688,7 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
         margin: 1%;
         width: 17em;
         height: 17em;
+     
      
        
     }
@@ -692,18 +710,31 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
   footer{
       display: flex;
       flex-direction: row;
-      /*flex-wrap: wrap;*/
       justify-content: left;
-    
+      align-items: flex-start;
+      padding: 1em;
   }
+
+
 
   footer h3{
     font-weight: 200;
     font-size: .5rem;
+    width: 65%;
+   flex-wrap: wrap;
   }
 
 footer img{
     height: 1.5em;
+}
+
+.footerImgContainer{
+    display: flex;
+    height: 100%;
+    align-content: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    padding: 2%;
 }
 
 .footerImgContainer ul{
@@ -712,18 +743,34 @@ footer img{
     justify-content: last baseline;
     font-size: .75em;
     
+    
 }
 
 @media (min-width:800px){
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        /*flex-wrap: wrap;*/
+        justify-content: left;
+        align-items: center;
+
+    }
     
     .footerImgContainer{
-        margin: 2em;
-        justify-content: space-between;
+        margin: 1em;
+        padding: 1em;
+        justify-content: space-evenly;
 
     }
     footer h3{
         font-weight: 200;
         font-size: 1rem;
+        width: 65%;
+        flex-wrap: wrap;
+      }
+      footer h2{
+        padding: 1em;
       }
 
       footer img{
@@ -758,25 +805,26 @@ footer img{
 }
  .dark .aboutSections{
     color: var(--clr-dark);
-    border: .1em solid var(--clr-accent2);
+    
    
 }
 
 .dark #present, .dark #previous{
-    background-color: var(--clr-dark);
+    background-color: var(--clr-accent7);
     color: var(--clr-accent5);
 
 }
 
 .dark #summary, .dark #ongoing{
-    background-color: var(--clr-accent1);
+    background-color: var(--clr-accent8);
     color: var(--clr-accent5);
 
 }
 
 .aboutSections{
     border: .1em solid var(--clr-accent4);
-    box-shadow: 2px 2px 4px rgb(113, 109, 109, 0.5);
+    box-shadow: 2px 2px 4px rgb(113, 109, 109, 0.5),
+    -2px -2px 4px;
     padding: 1rem;
     border-radius: 15px;
 }
