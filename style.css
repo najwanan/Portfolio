@@ -867,6 +867,16 @@ footer img{
     padding: 1rem;
     border-radius: 15px;
 }
+
+.aboutSections .aboutTextLink{
+    font-size: var(--fs-body);
+    font-weight: 300;
+}
+
+.aboutSections .aboutTextLink:hover{
+    color: var(--clr-accent1);
+}
+
 .aboutGrid{
     display: grid;
     width: 90vw;
@@ -924,12 +934,14 @@ footer img{
     .workHistoryWrapper{
         width: 40%;
         padding: 1em;
+        padding-left: 3em;
         
     }
     .workTextWrapper{
 
         flex-basis: 60%;
         padding: 1em;
+        width: 80%;
 
     }
     .workHistoryTxt{
