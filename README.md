@@ -57,3 +57,11 @@ Concepts/Tools to explore and practice:
 ### Additional Features 
 - [ ] Modals for project buttons 
 - [ ] Preloader 
+
+
+## Acknowledgements 
+
+The following tutorials were utilized in creating some of the features of this project. 
+Thanks to the Content Creators/Teachers tutorials on creating portfolio:
+Ania Kubow 
+Kevin Powell
