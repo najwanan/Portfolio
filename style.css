@@ -334,34 +334,9 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
     line-height: 1.4;
 }
 
-/*.typeHeader{
-    animation:
-        typing 5s steps(50, end), 
-        cursor 1.2s step-end infinite;
-    white-space: nowrap; /*content on next line
-}*/
 
-/*.contactWrapper p:nth-child(1){
-  width: 15em;
-  animation: type 2s steps(50, end);
-  animation-fill-mode: forwards;
-}*/
 
-.contactWrapper p:nth-child(2){
-    width: 15em;
-    opacity:0;
-    animation: type2 2s steps(60, end);
-    animation-delay: 2s; 
-    animation-fill-mode: forwards;
-}
 
-.contactWrapper p:nth-child(3){
-    width: 15em;
-    opacity: 0;
-    animation: type3 2s steps(60, end), blink .5s step-end infinite alternate;
-    animation-delay: 4s;
-    animation-fill-mode: forwards;
-}
 
 /*@keyframes type{
     0%{ width: 0;}
@@ -382,13 +357,12 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 
     1% {opacity: 1;}
 
-    99.9% {border-right: .15em solid orange }
+    99.9% {border-right: .15em solid  }
 
     100%{
       opacity: 1;
       border:none;
     }
-
 }
 
 @keyframes type3{
@@ -437,13 +411,6 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
     
 }
 
-@keyframes testAni{
-    0%{width: 0;}
-
-    1%{opacity: 1;}
-
-    100%{opacity: 1;}
-}
 
 @keyframes typing{
  0%{ width: 0;}
@@ -469,7 +436,6 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
 }
 
 
-
 @keyframes typing2b{
     0%{ width: 0;}
 
@@ -480,7 +446,6 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
    100% {
        opacity: 1;
     }
-   
 
 }
 
@@ -494,8 +459,6 @@ box-shadow: inset 4px 4px 4px rgb(255, 255,255),
    100% {
        opacity: 1;
     }
-   
-
 }
 
 @keyframes cursor{
