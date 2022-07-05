@@ -188,6 +188,12 @@ a:hover{
 }
 
 
+/*@media (min-width:961px){
+
+}
+
+adding breakpoint for tablets*/
+
 /*dark-light mode switch */
 .switch{
     width: 3em;
