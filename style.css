@@ -159,7 +159,9 @@ li, a{
 
 }
 
-
+homeLink{
+    height: 50%;
+}
 
 a:hover{
     color: #817B8C;
